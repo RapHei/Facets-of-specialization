@@ -22,13 +22,13 @@ T1-T46 T48-T60
 
 * Setup
 set more off
-cd "C:\Users\ac135138\Documents\Artikel\Global Research Trends\Article\Github"
+cd "C:\Users\ac135138\Documents\Github\Facets-of-specialization"
 
 
 *********
 **** Load file for Model 1
 *********
-use "Output\Repo_Event_DF_Final_M1.dta", clear
+use "Output\Stata\Repo_Event_DF_Final_M1.dta", clear
 gen log_Pub_Cum = log(Pub_Total + 1)
 
 stset Event_Time [pw=Weight], failure(Advisor==1) id(ID) 
@@ -39,9 +39,9 @@ estimates store m1
 
 
 *********
-**** Load file for Models 2-5 (w/ suffix for baseline)
+**** Load file for Models 2-5
 *********
-use "Output\Repo_Event_DF_Final_0.9.dta", clear
+use "Output\Stata\Repo_Event_DF_Final_0.9.dta", clear
 * Z-standardize
 egen HHI = std(hhi)
 egen Consistency = std(Consistency_Mean)
@@ -50,7 +50,6 @@ egen Novelty = std(novel_inte)
 gen Consistency_Square = Consistency^2
 
 stset Event_Time [pw=Weight], failure(Advisor==1) id(ID) 
-
 
 
 *** Models 2-5
@@ -67,7 +66,7 @@ quiet streg $UV_5, dist(weib) vce(robust)
 estimates store m5
 
 
-esttab m1 m2 m3 m4 m5 using "Output/Tab3_MainResults.html", ///
+esttab m1 m2 m3 m4 m5 using "Output/Stata/Tab3_MainResults.html", ///
  b(%9.0g ) eform not se star varwidth(25) aic replace
 
  
@@ -76,35 +75,18 @@ esttab m1 m2 m3 m4 m5 using "Output/Tab3_MainResults.html", ///
 *********
  
 * Fig4
-*** Prepare coefficients
-use "Robustness\Repo_Event_DF_AsIs_0.9.dta", clear
 
-* Z-standardize and rename vars
-egen HHI = std(hhi)
-egen Consistency = std(Identity_Mean)
-gen log_Pub_Cum = log(Pub_Total + 1)
-egen Novelty = std(novel_inte)
-gen Consistency_Square = Consistency^2
-
-
-*** SURVIVAL 
-stset Event_Time [pw=Weight], failure(Advisor==1) id(ID) 
-
-
-*** Only main model
-quiet streg $UV_5, dist(weib) vce(robust)
-estimates store m5
-
-
-** save
-* SE
-esttab m5 using "Output/Robustness/SE_Single_Base09.csv", ///
+** export to R (cf. Repo_Fig4_TargetSpec.R)
+*** SE
+esttab m5 using "Output/Stata/SE_Single_Base09.csv", ///
   eform not se replace wide plain/** ado von Ben Jann***/ 
-* Pvalues
-esttab m5 using "Output/Robustness/Pval_Single_Base09.csv", ///
+*** Pvalues
+esttab m5 using "Output/Stata/Pval_Single_Base09.csv", ///
   eform not p replace wide plain/** ado von Ben Jann***/
 
+** Use different thresholds
 
+  
 
 * Fig5
 *** Plot to compare effect size
@@ -151,7 +133,7 @@ graph export Output/Figures/Fig5__WhiteFemale_T50_Base09.pdf, replace
 quiet streg $UV_5, dist(weib) vce(robust) 
 
 margins [pw=Weight], predict(hr) at(Consistency = (-0.5 0 0.5 1 1.5) log_Pub_Cum = (0 1 2 3) )  vce(unconditional) ///
-	saving(Output/Margins_Base09_HR, replace) 
+	saving(Output/Stata/Margins_Base09_HR, replace) 
 
 use Output/Margins_Base09_HR, clear
 * nicer colnames

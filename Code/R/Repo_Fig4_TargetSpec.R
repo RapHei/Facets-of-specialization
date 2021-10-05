@@ -1,16 +1,18 @@
 # Figure 4: Plot effects of (selected) targeted specializations 
 
-setwd('C:/Users/ac135138/Documents/Artikel/Global Research Trends/Article')
-  
+setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization')
+
+library(dplyr)
+library(dotwhisker)
 
 # Functions
 ## Assign topic labels
-labels <- read.csv(file = 'Github/Data/Topic_description_final.csv', sep = ';')
+labels <- read.csv(file = 'Data/Topic_description_final.csv', sep = ';')
 
 labeller <- function(terms, labels){
   target <- stringr::str_extract(terms, "T\\d?.")
   target <- as.numeric(gsub('T', '', target))
-  term.lables <- labels[match( target, labels$Topics),]$New.Label
+  term.lables <- labels[match( target, labels$Topics),]$Label
   # add "Txx." before label
   term.lables <- paste("T", target, ".", term.lables, sep = '')
   term.out <- c(as.character(terms[is.na(target)]), term.lables[!is.na(target)])
@@ -40,9 +42,9 @@ clean.Stata <- function(df, type){
 
 ### load results from stata
 load.stata <- function(file.name){
-  soc <- read.csv(file = paste('Github/Output/Robustness/SE_', file.name, '.csv', sep = ''), header = FALSE)
+  soc <- read.csv(file = paste('Output/Stata/SE_', file.name, '.csv', sep = ''), header = FALSE)
   soc <- clean.Stata(soc, type = 'SE')
-  soc.pval <- read.csv(file = paste('Github/Output/Robustness/Pval_', file.name, '.csv', sep = ''), header = FALSE)
+  soc.pval <- read.csv(file = paste('Output/Stata/Pval_', file.name, '.csv', sep = ''), header = FALSE)
   soc.pval <- clean.Stata(soc.pval, type = 'p.value')
   soc$p.val <- soc.pval$p.value
   # freaking factors
@@ -103,6 +105,6 @@ px <- dwplot(df.plot,
   theme(legend.title=element_blank()) +
   scale_colour_manual(values=c("cyan","deepskyblue","blue","darkblue"))
 
-pdf('Github/Output/Figures/Figure4_TargetedSpec.pdf')
+pdf('Output/Figures/Figure4_TargetedSpec.pdf')
 px
 dev.off()
