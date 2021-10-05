@@ -1,7 +1,7 @@
 # Repository for *Facets of specialization*
 
 This repository contains code and data associated with *Facets of specialization*. 
-The published paper can be found here...
+The paper can be found here...
 
 If you use any of the code or ideas presented here, please cite our paper:
 ...
@@ -30,7 +30,7 @@ The raw text data can be found here:
 
 
 ## Code
-The repository hosts the R-code to construct the *facets of specialization* that are key to our paper. 
+The repository hosts the R-code to construct each *facet of specialization* as discussed in the paper: 
 
 * **Targeted Specialization**: `Repo_TargetSpec.R`
 * **Focus**: `Repo_HHI.R`
