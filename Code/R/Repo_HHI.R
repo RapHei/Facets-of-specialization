@@ -1,6 +1,6 @@
 # Facet of specialization: Focus
 
-setwd('WoS')
+setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization')
 
 # Load theta
 load('Github/Data/Theta_Repo.RData') # theta
