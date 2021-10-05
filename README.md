@@ -18,7 +18,7 @@ For that purpose, we provide:
 * Topic loads for each thesis: `Theta_Repo.RData` 
 * Topic loads for students' publication: `Theta_WoS_Repo.RData`
 * Students' characteristics: `Main_Repo.dta`
-* Topic trends as estimated by `estimate.effects` from `stm`-package: []()
+* Topic trends as estimated by `estimate.effects` from `stm`-package. Due to the file's size, please download it here: [Repo_stm.effect](https://bwsyncandshare.kit.edu/s/a3w7tznXLiAKZAB)
 
 All those files rest on the main stm estimated with 60 topics:
 ``
@@ -45,6 +45,6 @@ Once all metrics are ready, we can merge them using `Repo_CreateMainDF.R` to der
  
 The main results of the paper (Table 3) and Figures 5 and 6 are then calculated with `Stata`. The necessary code is included in this repo under "Code/Stata". Figure 4 uses output from `Stata` (coefficients, SE, pvalues), but is produced by `ggplot`.
 
-Furthermore, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends.R`, respectively, to reconstruct Figures 2 and 3. For the latter, you need `` as input.
+Furthermore, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends.R`, respectively, to reconstruct Figures 2 and 3. For the latter, you need `Repo_stm.effect` as input.
 
-Finally, Figure 1 basically resembles ...links
+Finally, Figure 1 basically resembles ...add links to ASA page...[TODO]
