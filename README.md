@@ -46,3 +46,5 @@ Once all metrics are ready, we can merge them using `Repo_CreateMainDF.R` to der
 The main results of the paper (Table 3) and Figures 5 and 6 are then calculated with `Stata`. The necessary code is included in this repo under "Code/Stata". Figure 4 uses output from `Stata` (coefficients, SE, pvalues), but is produced by `ggplot`.
 
 Furthermore, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends.R`, respectively, to reconstruct Figures 2 and 3. For the latter, you need `` as input.
+
+Finally, Figure 1 basically resembles ...links
