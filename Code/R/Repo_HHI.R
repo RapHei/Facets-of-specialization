@@ -3,7 +3,7 @@
 setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization')
 
 # Load theta
-load('Github/Data/Theta_Repo.RData') # theta
+load('Data/Theta_Repo.RData') # theta
 topics <- paste('X', 1:60, sep = '')
 
 # Calculate Herfindahl (HHI)
@@ -31,4 +31,4 @@ theta$entro<- apply(theta[, topics], 1, FUN = entro, normalize = TRUE)
 
 focus <- theta[, c('ID', 'hhi', 'max.share', 'entro')]
 
-save(focus, file = 'Github/HHI/Repo_HHI.RData')
+save(focus, file = 'Data/Repo_HHI.RData')

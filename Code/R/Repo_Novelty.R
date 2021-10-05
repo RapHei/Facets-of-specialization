@@ -1,6 +1,6 @@
 # Facet of specialization: Novelty
 
-setwd('WoS')
+setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization')
 
 # Functions
 ## Binarize DF, each cell counting two highest topics per thesis
@@ -47,7 +47,7 @@ novelty.score <- function(theta, year, w){
 
 
 # Load theta and define 2 max-topics for each thesis
-load('Github/Data/Theta_Repo.RData') # theta
+load('Data/Theta_Repo.RData') # theta
 
 topics <- paste('X', 1:60, sep = '')
 theta$max <- apply(theta[, topics], 1, max.n, n = 1)
@@ -67,4 +67,23 @@ for(year in years){
   }
 }
 
-save(novelty, file = 'Github/Novelty/Repo_Novelty.RData') 
+save(novelty, file = paste('Data/Repo_Novelty_', w,'.RData', sep = '')) 
+
+
+
+## For robustness tests
+windows <- c(2,4)
+
+for(w in windows){
+  years <- (1980 + w):2015
+  for(year in years){
+    thesis.t <- novelty.score(theta, year, w)
+    if(year == min(years)){
+      novelty <- thesis.t
+    }
+    else{
+      novelty <- rbind(novelty, thesis.t)
+    }
+  }
+  save(novelty, file = paste('Data/Repo_Novelty_', w,'.RData', sep = '')) 
+}

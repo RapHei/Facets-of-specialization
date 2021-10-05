@@ -1,6 +1,6 @@
 # Facet of specialization: Targeted specialization
 
-setwd('WoS')
+setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization')
 
 # Functions
 ## Iterate over all rows and binarize by threshold
@@ -30,14 +30,15 @@ topic.contri.thres <- function(theta, year, baseline){
 }
 
 
-### Construct "topic contributions" w/ different baselines
+# Construct "targeted specialization" w/ different baselines
+
 ## Load theta
-load('Github/Data/Theta_Repo.RData') # theta
+load('Data/Theta_Repo.RData') # theta
 topics <- paste('X', 1:60, sep = '')[-47] # exclude noise topic T47 (included in online supplemental)
 
 ## iterate over years
 years <- c(1981:2015)
-base <- 0.9 # alternative baselines (cf. online supplemental)
+base <- 0.9 # alternative baselines (cf. bewlow & online supplemental)
 
 for(year in years){
   temp <- topic.contri.thres(theta, 
@@ -51,4 +52,22 @@ for(year in years){
   }
 }
 
-save(df, file = paste('Github/TargetSpec/Repo_TargetSpec_', base, '.RData', sep = ''))
+save(df, file = paste('Data/Repo_TargetSpec_', base, '.RData', sep = ''))
+
+
+## For robustness checks
+for(base in c(0.75, 0.8, 0.85)){
+  for(year in years){
+    temp <- topic.contri.thres(theta, 
+                               year = year,
+                               baseline = base)
+    if(year == min(years)){
+      df <- temp
+    }
+    else{
+      df <- rbind(df, temp)
+    }
+  }
+  
+  save(df, file = paste('Data/Repo_TargetSpec_', base, '.RData', sep = ''))
+}

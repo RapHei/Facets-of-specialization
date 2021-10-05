@@ -1,5 +1,6 @@
 # Facet of specialization: Consistency
-setwd('WoS')
+
+setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization')
 
 # Functions
 ## Cosine
@@ -10,8 +11,8 @@ cosine <- function(x, y){
 
 
 # Load thetas (from theses and merged WoS articles)
-load(file = 'Github/Data/Theta_WoS_Repo_AsIs.RData') # theta.wos
-load('Github/Data/Theta_Repo.RData') # theta (from dissertations)
+load(file = 'Data/Theta_WoS_Repo.RData') # theta.wos
+load('Data/Theta_Repo.RData') # theta (from dissertations)
 
 topics <- paste('X', 1:60, sep = '')
 
@@ -48,10 +49,11 @@ for(id in unique(theta.wos$ID)){
   }
 }
 print(Sys.time() - start.time) # takes around 7 minutes
-save(df,df.PubBefore, file = paste('Github/Consistency/Repo_Consistency_Raw.RData', sep = '')) # temporary storage
+save(df,df.PubBefore, file = paste('Data/Repo_Consistency_Raw.RData', sep = '')) # temporary storage
+
 
 ## Load
-load(file = 'Github/Consistency/Repo_Identity_Raw.RData') #df, df.PubBefore
+load(file = 'Data/Repo_Consistency_Raw.RData') #df, df.PubBefore
 
 
 # Consistency/Pub_cum by year
@@ -88,7 +90,7 @@ for(i in 1:nrow(ident.mean)){
 df$Pub.Year <- df.Ident.Yr$Pub.Year; df$Pub.Cum.Year <- df.Ident.Yr$Pub.Cum.Year; df$Year <- df.Ident.Yr$Year;
 
 ## Merge main.df to add events to publications (all rows of df)
-df.main <- foreign::read.dta(file = 'Github/Data/Main_Repo.dta')
+df.main <- foreign::read.dta(file = 'Data/Main_Repo.dta')
 df.merge <- df.main[, c('Thesisyear', 'ID' , 'Advisor', 'Event_Time')]
 
 df.temp <- merge(df, df.merge,
@@ -117,4 +119,7 @@ event.1.temp <- merge(event.1.temp, event.1, by = c('ID', 'Pub.Event.Time'), all
 consistency <- rbind(event.0, event.1.temp)
 consistency <- consistency[, c('ID', 'Consistency.Mean', 'Pub.Cum.Year')]
 ## Merge publication_before
-consistency <
+consistency <- merge(consistency, df.PubBefore, 
+                     by = 'ID', all.x = T)
+
+save(consistency, file = 'Data/Repo_Consistency_Final.RData')
