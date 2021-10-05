@@ -1,7 +1,6 @@
-# basiert auf CorrGraph_v4
+# Facet of specialization: Figure 2 (topic-network)
 
-# setwd('C:/Users/ac135138/Documents/Artikel/Global Research Trends/STM')
-setwd('WoS/Github')
+setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization')
 
 ## Load theta and derive correlations
 load('Data/Theta_Repo.RData') # theta

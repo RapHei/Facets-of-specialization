@@ -1,9 +1,10 @@
 # Repository for *Facets of specialization*
 
-This repository contains code and data associated with the paper *Facets of specialization*. 
-The published paper in ASR can be found here...
+This repository contains code and data associated with *Facets of specialization*. 
+The published paper can be found here...
 
 If you use any of the code or ideas presented here, please cite our paper:
+...
 
 
 ## Summary
@@ -40,9 +41,8 @@ The repository hosts the R-code to construct the *facets of specialization* that
 For *targeted specialization*, *focus*, and *novelty*, we used theses' topic loads (`Theta_Repo.RData`).
 *Consistency* measures the closeness of a student's publications to their dissertation, so we use `Theta_Repo.RData` and `Theta_WoS_Repo.RData`.
 
-Once all metrics are constructed, we can merge them using `Repo_CreateMainDF.R` to derive the final event-history dataset. 
-The main results (Table 3) and Figures 4-6 are then calculated with `Stata`. The necessary code is also included in this repo.
+Once all metrics are ready, we can merge them using `Repo_CreateMainDF.R` to derive the final event-history dataset.
+ 
+The main results of the paper (Table 3) and Figures 5 and 6 are then calculated with `Stata`. The necessary code is included in this repo under "Code/Stata". Figure 4 uses output from `Stata` (coefficients, SE, pvalues), but is produced by `ggplot`.
 
-To reconstruct Figure 2 and 3, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends`, respectively. For the latter, you need 
-
-* 
+Furthermore, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends.R`, respectively, to reconstruct Figures 2 and 3. For the latter, you need `` as input.
