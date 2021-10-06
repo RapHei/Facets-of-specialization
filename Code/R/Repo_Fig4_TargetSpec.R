@@ -103,8 +103,25 @@ px <- dwplot(df.plot,
   labs(x = 'Hazard Rate') +
   theme_minimal() +
   theme(legend.title=element_blank()) +
-  scale_colour_manual(values=c("cyan","deepskyblue","blue","darkblue"))
+  scale_colour_manual(values=c("cyan","deepskyblue","blue","darkblue"), guide = guide_legend(reverse = TRUE))
 
 pdf('Output/Figures/Figure4_TargetedSpec.pdf')
 px
+dev.off()
+
+
+# plot (black&white, print version)
+px.bw <- dwplot(df.plot,
+             conf.level = .83) +
+  geom_vline(xintercept = 1, colour = "grey60", linetype = 2) +
+  labs(x = 'Hazard Rate') +
+  theme_minimal() +
+  theme(legend.title=element_blank()) +
+  scale_colour_grey(start = 0.7,
+                    end = 0.1,
+                    aesthetics = "colour",
+                    guide = guide_legend(reverse = TRUE))
+
+pdf('Output/Figures/Figure4_TargetedSpec_BW.pdf')
+px.bw
 dev.off()

@@ -93,7 +93,7 @@ esttab m5 using "Output/Stata/Pval_Single_Base09.csv", ///
 quiet streg $UV_3, dist(weib) vce(robust)
 
 
-* T50
+* T50, in color
 stcurve, cumhaz at1(White=1 T50=1) at2(White=1 T50=0) at3(White=0 T50=1) at5(White=0 T50=0) ///
 	ytitle("Cumulative Hazard", size(small)) ///
 	xtitle("Years", size(small)) ///	
@@ -124,8 +124,41 @@ graph export Output/Figures/Fig5_Female_Stcurve_T50.pdf, replace
 * Save multiple graphs as one
 gr combine Output/Figures/Fig5_White_Stcurve_T50.gph ///
 	Output/Figures/Fig5_Female_Stcurve_T50.gph, col(2) ycommon xcommon
-graph export Output/Figures/Fig5__WhiteFemale_T50_Base09.pdf, replace
+graph export Output/Figures/Fig5_WhiteFemale_T50_Base09.pdf, replace
 
+
+* T50, black&white, print version
+stcurve, cumhaz at1(White=1 T50=1) at2(White=1 T50=0) at3(White=0 T50=1) at5(White=0 T50=0) ///
+	ytitle("Cumulative Hazard", size(small)) ///
+	xtitle("Years", size(small)) ///	
+	ylabel(,labsize(small)) ///
+	xlabel(0(5)35,labsize(small)) ///
+	title("") ///
+	scheme(s1mono) ///
+	legend(label(1 White=1, T50=1) label(2 White=1, T50=0) label(3 White=0, T50=1) label(4 White=0, T50=0) nobox region(style(none)) size(vsmall)) ///
+	clcolor(black black gs12 gs12) ///
+	lpattern(solid dash solid dash) ///
+	saving(Output/Figures/Fig5_White_Stcurve_T50_BW, replace)
+graph export Output/Figures/Fig5_White_Stcurve_T50_BW.pdf, replace
+
+stcurve, cumhaz at1(Female=1 T50=1) at2(Female=1 T50=0) at3(Female=0 T50=1) at5(Female=0 T50=0) ///
+	ytitle("Cumulative Hazard", size(small)) ///
+	xtitle("Years", size(small)) ///
+	ylabel(,labsize(small)) ///
+	xlabel(,labsize(small)) ///
+	xlabel(0(5)35,labsize(small)) ///
+	title("") ///
+	scheme(s1mono) ///
+	legend(label(1 Female=1, T50=1) label(2 Female=1, T50=0) label(3 Female=0, T50=1) label(4 Female=0, T50=0) nobox region(style(none)) size(vsmall)) ///
+	clcolor(black black gs12 gs12) ///
+	lpattern(solid dash solid dash) ///
+	saving(Output/Figures/Fig5_Female_Stcurve_T50_BW, replace)
+graph export Output/Figures/Fig5_Female_Stcurve_T50_BW.pdf, replace
+
+* Save multiple graphs as one
+gr combine Output/Figures/Fig5_White_Stcurve_T50_BW.gph ///
+	Output/Figures/Fig5_Female_Stcurve_T50_BW.gph, col(2) ycommon xcommon
+graph export Output/Figures/Fig5__WhiteFemale_T50_Base09_BW.pdf, replace
 
 
 * FIG6
@@ -135,17 +168,17 @@ quiet streg $UV_5, dist(weib) vce(robust)
 margins [pw=Weight], predict(hr) at(Consistency = (-0.5 0 0.5 1 1.5) log_Pub_Cum = (0 1 2 3) )  vce(unconditional) ///
 	saving(Output/Stata/Margins_Base09_HR, replace) 
 
-use Output/Margins_Base09_HR, clear
+use Output/Stata/Margins_Base09_HR, clear
 * nicer colnames
 rename _at5 log_Pub_Total
-rename _at7 Z_Identity	
-gen margin_scale = _margin
+rename _at8 Z_Identity	
 
 * just to smooth figure for extreme value of consistency = 1.5:
 drop margin_scale
 gen margin_scale = _margin
 replace margin_scale = 8 if margin_scale > 8
 
+* colors
 twoway (contour margin_scale Z_Identity log_Pub_Total, ///
 	ccuts(0.0(0.5)2 2(1)8) ), ///
 	ytitle("Standardized values of {it:consistency} metric")  ///
@@ -153,3 +186,14 @@ twoway (contour margin_scale Z_Identity log_Pub_Total, ///
 	ztitle("Hazard ratio for {it:first time advisorship}") ///
 	graphregion(fcolor(white))
 graph export Output/Figures/Fig6_Twoway_Base09_HR.pdf, replace
+
+* black and white
+twoway (contour margin_scale Z_Identity log_Pub_Total, ///
+	ccuts(0.0(0.5)2 2(1)8) ///
+	ccolors(gs1 gs2 gs3 gs4 gs5 gs6 gs7 gs8 gs9 gs10 gs11 gs12) ), ///
+	ytitle("Standardized values of {it:consistency} metric")  ///
+	xtitle("Log({it:Cumulated publications})") ///
+	ztitle("Hazard ratio for {it:first time advisorship}") ///
+	graphregion(fcolor(white)) 
+graph export Output/Figures/Fig6_Twoway_Base09_HR_BW.pdf, replace
+
