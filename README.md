@@ -35,8 +35,7 @@ The repository hosts the R-code to construct each *facet of specialization* as d
 * **Targeted Specialization**: `Repo_TargetSpec.R`
 * **Focus**: `Repo_HHI.R`
 * **Novelty**: `Repo_Novelty.R`
-* **Consistency**: `Repo_Consistency.R`
-
+* **Consistency**: `Repo_Consistency.R` 
 
 For *targeted specialization*, *focus*, and *novelty*, we used theses' topic loads (`Theta_Repo.RData`).
 *Consistency* measures the closeness of a student's publications to their dissertation, so we use `Theta_Repo.RData` and `Theta_WoS_Repo.RData`.
@@ -48,3 +47,7 @@ The main results of the paper (Table 3) and Figures 5 and 6 are then calculated 
 Furthermore, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends.R`, respectively, to reconstruct Figures 2 and 3. For the latter, you need `Repo_stm.effect` as input.
 
 Finally, Figure 1 presents insights on the number of sociology students and their demographics. The data mirrors the figures of the ASA on [ethnicity](https://www.asanet.org/academic-professional-resources/data-about-disipline/data-dashboard/degrees-awarded/doctorates-awarded-sociology-race-or-ethnicity) and [gender](https://www.asanet.org/academic-professional-resources/data-about-disipline/data-dashboard/degrees-awarded/doctorates-awarded-sociology-gender), and [NSF Survey of Earned Doctorates](https://ncsesdata.nsf.gov/home/). Figure 1 was made using `Repo_Fig1_FieldStats.R`.
+
+## Dependencies
+To run the R scripts described above you will need to install a series of packages using the following command:
+`install.packages(c("Desctools","dotwhisker","plyr","fastdummies","foreign","ggplot2", "ggrepel","grid","gtools","igraph","plyr","RColorBrewer","rgexf","reshape2","stm","stringr"))`
