@@ -38,7 +38,7 @@ topics <- paste('X', 1:60, sep = '')[-47] # exclude noise topic T47 (included in
 
 ## iterate over years
 years <- c(1981:2015)
-base <- 0.9 # alternative baselines (cf. bewlow & online supplemental)
+base <- 0.9 # alternative baselines (cf. below & online supplemental)
 
 for(year in years){
   temp <- topic.contri.thres(theta, 

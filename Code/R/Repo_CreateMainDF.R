@@ -38,8 +38,7 @@ df.main <- merge(df.main, df,
 
 ## save to stata
 df.main$Pub_Total <- df.main$Pub.Cum.Year + df.main$Pubs_Before_Total
-foreign::write.dta(df.main, file = paste('Output/Repo_Event_DF_Final_', base, '.dta', sep = ''))
-
+foreign::write.dta(df.main, file = paste('Output/Stata/Repo_Event_DF_Final_', base, '.dta', sep = ''))
 
 
 # To derive Model 1: same as above, just outcomment novelty
