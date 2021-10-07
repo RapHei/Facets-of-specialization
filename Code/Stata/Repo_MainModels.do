@@ -76,15 +76,13 @@ esttab m1 m2 m3 m4 m5 using "Output/Stata/Tab3_MainResults.html", ///
  
 * Fig4
 
-** export to R (cf. Repo_Fig4_TargetSpec.R)
+** export to R (cf. Repo_Fig4_TargetSpec.R; might use alternative baselines, cf. Repo_TargetSpec.R)
 *** SE
 esttab m5 using "Output/Stata/SE_Single_Base09.csv", ///
-  eform not se replace wide plain/** ado von Ben Jann***/ 
+  eform not se replace wide plain
 *** Pvalues
 esttab m5 using "Output/Stata/Pval_Single_Base09.csv", ///
-  eform not p replace wide plain/** ado von Ben Jann***/
-
-** Use different thresholds
+  eform not p replace wide plain
 
   
 
