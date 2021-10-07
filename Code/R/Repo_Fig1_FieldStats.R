@@ -1,4 +1,10 @@
-# setwd(.~)
+# Figure 1: Demographic Developments in U.S. Sociology.  
+
+## Figure 1 rests on the following, publicly available, data:  
+### [ethnicity](https://www.asanet.org/academic-professional-resources/data-about-disipline/data-dashboard/degrees-awarded/doctorates-awarded-sociology-race-or-ethnicity) 
+### [gender](https://www.asanet.org/academic-professional-resources/data-about-disipline/data-dashboard/degrees-awarded/doctorates-awarded-sociology-gender)
+### [NSF Survey of Earned Doctorates](https://ncsesdata.nsf.gov/home/)
+
 
 require(ggplot2)
 require(reshape2)

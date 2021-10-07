@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gexf xmlns="http://www.gexf.net/1.3" xmlns:viz="http://www.gexf.net/1.3/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.3 http://www.gexf.net/1.3/gexf.xsd" version="1.3">
-  <meta lastmodifieddate="2021-10-05">
+  <meta lastmodifieddate="2021-10-07">
     <creator>NodosChile</creator>
     <description>A GEXF file written in R with "rgexf"</description>
     <keywords>GEXF, NodosChile, R, rgexf, Gephi</keywords>
@@ -20,7 +20,7 @@
           <attvalue for="att2" value="French/Can Soc"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-88.3733858711143" y="-0.53298627675656" z="0"/>
+        <viz:position x="-79.9675689876536" y="47.6784024882998" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="2" label="X2">
@@ -29,7 +29,7 @@
           <attvalue for="att2" value="Identity"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-70.5447658405654" y="4.53657186597782" z="0"/>
+        <viz:position x="-28.8069999336685" y="-12.616820814283" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="3" label="X3">
@@ -38,7 +38,7 @@
           <attvalue for="att2" value="Religion"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-49.5387448905175" y="9.75191755832174" z="0"/>
+        <viz:position x="-40.6544627365924" y="-95.054312474294" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="4" label="X4">
@@ -47,7 +47,7 @@
           <attvalue for="att2" value="Race: Latinx"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="56.8722355884629" y="90.9970032591248" z="0"/>
+        <viz:position x="12.8913842519197" y="-98.8815680964474" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="5" label="X5">
@@ -56,7 +56,7 @@
           <attvalue for="att2" value="Self-perception"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-26.4676765306378" y="38.75890170649" z="0"/>
+        <viz:position x="-13.6428383715768" y="21.2712986018309" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="6" label="X6">
@@ -65,7 +65,7 @@
           <attvalue for="att2" value="Violence"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-88.3342743759367" y="-97.8296362095693" z="0"/>
+        <viz:position x="81.9135467441244" y="-55.185173595671" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="7" label="X7">
@@ -74,7 +74,7 @@
           <attvalue for="att2" value="School"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="84.1137884610867" y="-48.3315968529051" z="0"/>
+        <viz:position x="-28.876490896476" y="95.6781523025726" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="8" label="X8">
@@ -83,7 +83,7 @@
           <attvalue for="att2" value="Child welfare"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-73.1973034104287" y="-71.4363799184118" z="0"/>
+        <viz:position x="45.8926462803925" y="70.8245371685361" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="9" label="X9">
@@ -92,7 +92,7 @@
           <attvalue for="att2" value="Medical"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="42.7220207556941" y="60.3320391233175" z="0"/>
+        <viz:position x="-80.1143771866911" y="-2.94043845906955" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="10" label="X10">
@@ -101,7 +101,7 @@
           <attvalue for="att2" value="Rural / environ"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-16.3874835636986" y="58.6289472924892" z="0"/>
+        <viz:position x="-41.7855344416284" y="-70.9318275246839" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="11" label="X11">
@@ -110,7 +110,7 @@
           <attvalue for="att2" value="Method: experiments"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="53.4214333645407" y="77.7557094154076" z="0"/>
+        <viz:position x="53.260987272126" y="41.0276524157013" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="12" label="X12">
@@ -119,7 +119,7 @@
           <attvalue for="att2" value="Econ soc"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-13.3863714747494" y="-100" z="0"/>
+        <viz:position x="48.5944159847252" y="4.85639224088985" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="13" label="X13">
@@ -128,7 +128,7 @@
           <attvalue for="att2" value="College students"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="35.8239569241854" y="43.5757056815702" z="0"/>
+        <viz:position x="-90.937716357617" y="-41.8259548751052" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="14" label="X14">
@@ -137,7 +137,7 @@
           <attvalue for="att2" value="Method: survey/scales"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-84.9848367096274" y="-29.0650696225552" z="0"/>
+        <viz:position x="1.62629554014629" y="100" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="15" label="X15">
@@ -146,7 +146,7 @@
           <attvalue for="att2" value="Social movement"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-37.4209764022027" y="-26.1425371967892" z="0"/>
+        <viz:position x="-75.8573452907994" y="71.8915426532655" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="16" label="X16">
@@ -155,7 +155,7 @@
           <attvalue for="att2" value="Internet"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="90.1419018598179" y="-92.2472766075702" z="0"/>
+        <viz:position x="12.1173428243787" y="-48.7798298486161" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="17" label="X17">
@@ -164,7 +164,7 @@
           <attvalue for="att2" value="Labor"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="14.8742769580459" y="-88.0013062130593" z="0"/>
+        <viz:position x="-62.0887721815576" y="9.31325314506211" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="18" label="X18">
@@ -173,7 +173,7 @@
           <attvalue for="att2" value="Gender: sexuality"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-57.5597113529217" y="-58.9106897282318" z="0"/>
+        <viz:position x="83.8493526179777" y="63.852279982922" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="19" label="X19">
@@ -182,7 +182,7 @@
           <attvalue for="att2" value="Career"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-2.70526801240717" y="-18.9545318208616" z="0"/>
+        <viz:position x="-0.94252536492499" y="-71.2598793937112" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="20" label="X20">
@@ -191,7 +191,7 @@
           <attvalue for="att2" value="Participation"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="88.3542564050893" y="-57.2592729137407" z="0"/>
+        <viz:position x="20.4354866007467" y="48.7429264544427" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="21" label="X21">
@@ -200,7 +200,7 @@
           <attvalue for="att2" value="Sociolinguistics"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="12.3691700468201" y="18.2720547433672" z="0"/>
+        <viz:position x="-50.7945754779964" y="-77.1729073499728" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="22" label="X22">
@@ -209,7 +209,7 @@
           <attvalue for="att2" value="Social Services"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-0.691977197161179" y="-34.2224401227495" z="0"/>
+        <viz:position x="-100" y="28.7588034226506" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="23" label="X23">
@@ -218,7 +218,7 @@
           <attvalue for="att2" value="Status/groups"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-71.3672100856372" y="91.9185751071634" z="0"/>
+        <viz:position x="89.6521902727456" y="60.5177368838189" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="24" label="X24">
@@ -227,7 +227,7 @@
           <attvalue for="att2" value="Illness"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-88.09715929849" y="74.0328043843865" z="0"/>
+        <viz:position x="-58.456377752898" y="-81.5216204428815" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="25" label="X25">
@@ -236,7 +236,7 @@
           <attvalue for="att2" value="Theory"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-61.3689729892739" y="67.0597539932764" z="0"/>
+        <viz:position x="-12.2279107919737" y="-82.6644002256551" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="26" label="X26">
@@ -245,7 +245,7 @@
           <attvalue for="att2" value="Science"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-42.9894412303633" y="100" z="0"/>
+        <viz:position x="-85.7475340824413" y="-40.4372296542581" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="27" label="X27">
@@ -254,7 +254,7 @@
           <attvalue for="att2" value="Organizations"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-57.1559222681176" y="45.2231989924647" z="0"/>
+        <viz:position x="-59.895792821426" y="-45.0994358780626" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="28" label="X28">
@@ -263,7 +263,7 @@
           <attvalue for="att2" value="Family: marriage"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-11.2477227380693" y="-73.4325025259906" z="0"/>
+        <viz:position x="96.5376305823538" y="-53.219547476412" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="29" label="X29">
@@ -272,7 +272,7 @@
           <attvalue for="att2" value="Gender: feminist"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="61.299471199888" y="-40.7733029408896" z="0"/>
+        <viz:position x="93.7654235268314" y="31.306258569224" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="30" label="X30">
@@ -281,7 +281,7 @@
           <attvalue for="att2" value="Ethnic studies"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="93.968418904353" y="8.09273423427055" z="0"/>
+        <viz:position x="-93.3117783128117" y="-80.4989423988839" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="31" label="X31">
@@ -290,7 +290,7 @@
           <attvalue for="att2" value="Sport/consumption"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="94.8230100255107" y="-26.1002734913803" z="0"/>
+        <viz:position x="-42.5977720480393" y="26.0101950276498" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="32" label="X32">
@@ -299,7 +299,7 @@
           <attvalue for="att2" value="Work"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-54.1528327788893" y="-51.7657147292666" z="0"/>
+        <viz:position x="-24.6856998140357" y="-80.0730418425159" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="33" label="X33">
@@ -308,7 +308,7 @@
           <attvalue for="att2" value="Law"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="100" y="92.4159739179528" z="0"/>
+        <viz:position x="-18.7115963227242" y="94.0587316318504" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="34" label="X34">
@@ -317,7 +317,7 @@
           <attvalue for="att2" value="Criminology"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-74.621571560065" y="-18.3457676787904" z="0"/>
+        <viz:position x="-79.0639554389832" y="-33.531045251515" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="35" label="X35">
@@ -326,7 +326,7 @@
           <attvalue for="att2" value="Fatherhood/divorce"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="84.4607357080945" y="-12.5721327883665" z="0"/>
+        <viz:position x="12.961263048857" y="19.6371489618727" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="36" label="X36">
@@ -335,7 +335,7 @@
           <attvalue for="att2" value="Method: survey/opinion"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="58.6646645475665" y="93.2639019519706" z="0"/>
+        <viz:position x="49.1196565694102" y="-75.5905044134035" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="37" label="X37">
@@ -344,7 +344,7 @@
           <attvalue for="att2" value="Arts"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-54.442145560712" y="-61.1718593608515" z="0"/>
+        <viz:position x="-2.52804278937026" y="8.26647281123611" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="38" label="X38">
@@ -353,7 +353,7 @@
           <attvalue for="att2" value="Demography"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="18.6265118229872" y="-18.2871014166209" z="0"/>
+        <viz:position x="-4.98196694310603" y="48.1790273474069" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="39" label="X39">
@@ -362,7 +362,7 @@
           <attvalue for="att2" value="Social work"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-6.74927724056674" y="-74.05297597761" z="0"/>
+        <viz:position x="74.337147081691" y="-84.4227335984971" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="40" label="X40">
@@ -371,7 +371,7 @@
           <attvalue for="att2" value="Method: qualitative"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-31.5031559739408" y="-56.287729555924" z="0"/>
+        <viz:position x="-84.726647150259" y="-86.6667631214862" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="41" label="X41">
@@ -380,7 +380,7 @@
           <attvalue for="att2" value="Social Capital"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-72.0642970321083" y="37.7257064739343" z="0"/>
+        <viz:position x="-38.0953483694179" y="19.5068990999421" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="42" label="X42">
@@ -389,7 +389,7 @@
           <attvalue for="att2" value="Higher education"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="99.1705729299365" y="-22.1909864392048" z="0"/>
+        <viz:position x="95.426363911142" y="-90.031433431601" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="43" label="X43">
@@ -398,7 +398,7 @@
           <attvalue for="att2" value="Poverty"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="99.8916414543041" y="13.8014628319326" z="0"/>
+        <viz:position x="40.9079120592297" y="27.1512734466849" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="44" label="X44">
@@ -407,7 +407,7 @@
           <attvalue for="att2" value="Globalization"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-79.6813645514757" y="-38.2542835492409" z="0"/>
+        <viz:position x="53.1972463861138" y="-84.3235131629595" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="45" label="X45">
@@ -416,7 +416,7 @@
           <attvalue for="att2" value="Conflict"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="30.0723477859621" y="56.5872533763997" z="0"/>
+        <viz:position x="6.04922643739015" y="94.4376808959927" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="46" label="X46">
@@ -425,7 +425,7 @@
           <attvalue for="att2" value="Stress"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="28.0553145084429" y="29.2401203898312" z="0"/>
+        <viz:position x="-80.7064259023693" y="11.4333405458699" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="47" label="X48">
@@ -434,7 +434,7 @@
           <attvalue for="att2" value="Adolescence"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-90.382057514187" y="65.8427941846668" z="0"/>
+        <viz:position x="42.1939061131223" y="-72.8546180225961" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="48" label="X49">
@@ -443,16 +443,16 @@
           <attvalue for="att2" value="Parenting"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-98.0030282347595" y="-61.1046634696404" z="0"/>
+        <viz:position x="-69.4380124829869" y="3.66455317053465" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="49" label="X50">
         <attvalues>
           <attvalue for="att1" value="0.0433551381470971"/>
-          <attvalue for="att2" value="Method: Models"/>
+          <attvalue for="att2" value="Method: Modeling"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-15.9560541858643" y="-14.6752982395364" z="0"/>
+        <viz:position x="64.5183285800807" y="90.779111888749" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="50" label="X51">
@@ -461,7 +461,7 @@
           <attvalue for="att2" value="Urban"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-30.4679495338559" y="-32.7116812818036" z="0"/>
+        <viz:position x="-21.7724868879694" y="-98.4110521179576" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="51" label="X52">
@@ -470,7 +470,7 @@
           <attvalue for="att2" value="Aging"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="97.8988947993249" y="52.5079700594895" z="0"/>
+        <viz:position x="86.6372323712242" y="-83.8205209831493" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="52" label="X53">
@@ -479,7 +479,7 @@
           <attvalue for="att2" value="Immigration"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-81.4873228897091" y="-61.969886014514" z="0"/>
+        <viz:position x="78.6708217685739" y="-28.9967350680656" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="53" label="X54">
@@ -488,7 +488,7 @@
           <attvalue for="att2" value="Motherhood"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-77.9919684332482" y="35.3205513442636" z="0"/>
+        <viz:position x="-90.512677612807" y="-7.14223310931131" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="54" label="X55">
@@ -497,7 +497,7 @@
           <attvalue for="att2" value="Stress"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="10.8085996906733" y="39.4012969148387" z="0"/>
+        <viz:position x="62.8816797525421" y="-100" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="55" label="X56">
@@ -506,7 +506,7 @@
           <attvalue for="att2" value="Mass media"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-62.3659316604" y="23.9253961693831" z="0"/>
+        <viz:position x="100" y="-88.8416864892061" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="56" label="X57">
@@ -515,7 +515,7 @@
           <attvalue for="att2" value="Knowledge"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-29.9163592524413" y="22.0902339792276" z="0"/>
+        <viz:position x="-3.65592779688819" y="-6.60403368887674" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="57" label="X58">
@@ -524,7 +524,7 @@
           <attvalue for="att2" value="Race: African-Amer"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-44.427580071842" y="-36.8599626864862" z="0"/>
+        <viz:position x="9.68170470307952" y="55.9271635204237" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="58" label="X59">
@@ -533,7 +533,7 @@
           <attvalue for="att2" value="Health"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-100" y="-7.28051983677959" z="0"/>
+        <viz:position x="16.5283084576237" y="-33.1608919715895" z="0"/>
         <viz:size value="10"/>
       </node>
       <node id="59" label="X60">
@@ -542,7 +542,7 @@
           <attvalue for="att2" value="Historical soc"/>
         </attvalues>
         <viz:color r="255" g="99" b="71" a="1"/>
-        <viz:position x="-72.4818038312855" y="-71.9979577592088" z="0"/>
+        <viz:position x="-77.7720682370533" y="-59.3752054376288" z="0"/>
         <viz:size value="10"/>
       </node>
     </nodes>

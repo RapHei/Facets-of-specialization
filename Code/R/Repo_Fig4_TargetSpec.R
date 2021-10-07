@@ -105,7 +105,7 @@ px <- dwplot(df.plot,
   theme(legend.title=element_blank()) +
   scale_colour_manual(values=c("cyan","deepskyblue","blue","darkblue"), guide = guide_legend(reverse = TRUE))
 
-pdf('Output/Figures/Figure4_TargetedSpec.pdf')
+pdf('Output/Figures/Fig4_TargetedSpec.pdf')
 px
 dev.off()
 
@@ -122,6 +122,6 @@ px.bw <- dwplot(df.plot,
                     aesthetics = "colour",
                     guide = guide_legend(reverse = TRUE))
 
-pdf('Output/Figures/Figure4_TargetedSpec_BW.pdf')
+pdf('Output/Figures/Fig4_TargetedSpec_BW.pdf')
 px.bw
 dev.off()

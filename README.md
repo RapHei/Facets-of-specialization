@@ -50,4 +50,4 @@ Finally, Figure 1 presents insights on the number of sociology students and thei
 
 ## Dependencies
 To run the R scripts described above you will need to install a series of packages using the following command:
-`install.packages(c("Desctools","dotwhisker","plyr","fastdummies","foreign","ggplot2", "ggrepel","grid","gtools","igraph","plyr","RColorBrewer","rgexf","reshape2","stm","stringr"))`
+`install.packages(c("Desctools","dotwhisker","plyr","fastdummies","foreign","ggplot2", "ggrepel","grid","gtools","igraph","plyr","RColorBrewer","rgexf","reshape2","stm","stringr"))`.

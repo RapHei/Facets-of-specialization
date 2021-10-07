@@ -9,24 +9,14 @@ library(stm)
 library(RColorBrewer)
 
 
-# load(file = paste("Data/PRO_model_60_superset_onlyYR.RData", sep = ""))
-# meta <- data.frame(Year = out$meta$Year)
-# stm.effect <- stm::estimateEffect(formula= 1:60 ~ s(Year), stmobj=model, metadata=meta) 
-# save(stm.effect, file="Data/Repo_stm.effect.RData")
-
-
-load("Data/Repo_stm.effect.RData") # stm.effect
-k_topics <- c(1:60)[-47]
-
-
 # Functions
 ## create trend lines from stm.effect, long.format
 create.trends.long <- function(estimate.trends, k_topics){
   curve.df <- data.frame(Topics = k_topics) 
-  curve.df[,as.character(round(p$x,3))] <- NA
+  curve.df[,as.character(round(estimate.trends$x,3))] <- NA
   for(t in k_topics){ 
     curve.df[curve.df$Topics == t,
-             as.character(round(p$x,3))] <- p$means[[t]]
+             as.character(round(estimate.trends$x,3))] <- estimate.trends$means[[t]]
   }
   curve.df.long <- melt(curve.df, id.vars = c("Topics"))
   curve.df.long$Year <-  as.numeric(as.character(curve.df.long$variable))
@@ -91,16 +81,14 @@ multiplot <- function(..., plotlist=NULL, cols) {
 }
 
 
+## Estimate topic trends
+# load(file = paste("Data/PRO_model_60_superset_onlyYR.RData", sep = ""))
+# meta <- data.frame(Year = out$meta$Year)
+# stm.effect <- stm::estimateEffect(formula= 1:60 ~ s(Year), stmobj=model, metadata=meta) 
+# save(stm.effect, file="Data/Repo_stm.effect.RData")
+load("Data/Repo_stm.effect.RData") # stm.effect
+k_topics <- c(1:60)[-47]
 
-## prepare labels
-labels <- read.csv(file = 'Data/Topic_description_final.csv', sep = ';')
-labels <- labels[-47,]
-labels <- labels[,c("Topics", "Label")]
-labels$Topics <- as.factor(paste("T", labels$Topics, sep = ''))
-labels$Label <- as.factor(labels$Label)
-
-
-## Estimate trends from stm.effect
 estimate.trends <- plot(stm.effect,
                         covariate="Year",
                         model=model,
@@ -109,10 +97,15 @@ estimate.trends <- plot(stm.effect,
                         ylab="Expected Topic Proportions",
                         main="Topic popularity",
                         printlegend=F)
-
-
-### 
 curve.df.long <- create.trends.long(estimate.trends, k_topics)
+
+
+## load labels
+labels <- read.csv(file = 'Data/Topic_description_final.csv', sep = ';')
+labels <- labels[-47,]
+labels <- labels[,c("Topics", "Label")]
+labels$Topics <- as.factor(paste("T", labels$Topics, sep = ''))
+labels$Label <- as.factor(labels$Label)
 
 
 # Top10 trending topics 
@@ -160,8 +153,7 @@ p2<- ggplot(curve.sub,
         plot.margin=unit(c(0,0.5,0,0.5), "cm")) +
   labs(y = 'Topic Prevalence', title = trend)  
 
-
-# depict both in one figure
-pdf('Output/Figures/Figure3_Trends.pdf', paper= "USr")
+## depict both in one figure
+pdf('Output/Figures/Fig3_Trends.pdf', paper= "USr")
 multiplot(p1,p2, cols = 1)
 dev.off()

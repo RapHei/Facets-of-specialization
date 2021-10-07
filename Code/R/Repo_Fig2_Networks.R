@@ -22,7 +22,7 @@ G <- igraph::delete.edges(G, which(E(G)$weight < mean(E(G)$weight)  ))
 # assign labels
 labels <- read.csv(file = 'Data/Topic_description_final.csv', sep = ';')
 labels <- labels[-47,]
-V(G)$label <- labels$New.Label
+V(G)$label <- labels$Label
 
 # assign sizes (share of theta)
 frequency <- colMeans(theta)
