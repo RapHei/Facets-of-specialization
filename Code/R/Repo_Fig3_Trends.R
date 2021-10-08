@@ -113,9 +113,25 @@ trend <- 'Trending'
 curve.sub <- top.trends(curve.df.long, trend)
 
 # colors
-colourCount = length(unique(curve.sub$Topics))
-getPalette = colorRampPalette(brewer.pal(10, "Spectral"))
-colours = getPalette(colourCount)
+colourCount <- length(unique(curve.sub$Topics))
+getPalette <- colorRampPalette(brewer.pal(10, "Spectral"))
+colours <- getPalette(colourCount)
+# customize color to improve readability
+colours[colours == "#FEE08B"] <- "#073763"
+colours[colours == "#E6F598"] <- "#bf9000"
+colours[colours == "#F46D43"] <- "#f606d3"
+
+ggplot(curve.sub, 
+       aes(x = Year, y = value, group = Topics, colour = Topics))  + 
+  geom_line(linetype = "solid") +
+  scale_colour_manual(values = colours, labels = unique(curve.sub$Label)) +  # allows >12 lines
+  geom_text_repel(data = subset(curve.sub, Year == 2015), aes(label = Topics), hjust = 0.7, show_guide = FALSE) +
+  geom_text_repel(data = subset(curve.sub, Year == 1980), aes(label = Topics), hjust = 0.7, show_guide = FALSE) +
+  theme_bw() + 
+  theme(legend.position="bottom",
+        legend.title=element_blank(),
+        plot.margin=unit(c(0,0.5,0,0.5), "cm")) +
+  labs(y = 'Topic Prevalence', title = trend)  
 
 # plot
 p1 <- ggplot(curve.sub, 
@@ -139,6 +155,10 @@ curve.sub <- top.trends(curve.df.long, trend)
 colourCount = length(unique(curve.sub$Topics))
 getPalette = colorRampPalette(brewer.pal(10, "Spectral"))
 colours = getPalette(colourCount)
+# customize color to improve readability
+colours[colours == "#FEE08B"] <- "#073763"
+colours[colours == "#E6F598"] <- "#bf9000"
+colours[colours == "#F46D43"] <- "#f606d3"
 
 # plot
 p2<- ggplot(curve.sub, 
