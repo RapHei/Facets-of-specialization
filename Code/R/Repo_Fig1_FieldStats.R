@@ -5,6 +5,7 @@
 ### [gender](https://www.asanet.org/academic-professional-resources/data-about-disipline/data-dashboard/degrees-awarded/doctorates-awarded-sociology-gender)
 ### [NSF Survey of Earned Doctorates](https://ncsesdata.nsf.gov/home/)
 
+setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization/Data/Figure 1')
 
 require(ggplot2)
 require(reshape2)
@@ -59,11 +60,13 @@ p1 <- ggplot(df, aes(x=Year, y=value, group = variable)) +
   facet_grid(as.factor(clust)~. ) +
   theme_bw() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1),
-        legend.title=element_blank(), legend.position="bottom") +
+        legend.title=element_blank(), legend.position="bottom",
+        panel.background = element_blank()) +
   scale_linetype_manual(values=c("dotted", 'longdash')) +
   scale_colour_manual(values=c('black', "grey60")) +
   scale_y_continuous(limits=c(0, 0.7), breaks=seq(0,0.7,0.1)) +
   scale_x_continuous(limits=c(1965, max(df$Year)), breaks=seq(1965, 2015, 5)) # use 5-year ticks
+
 
 ## Number of students
 df.recip <- read.csv('SED_Sociology_1966-2018.csv', sep = ',', header = T)
@@ -71,15 +74,17 @@ df.recip$X <- NULL
 df3 <- melt(df.recip, id = 'Year')
 df3$clust <- 'Number of doctorates'
 
+
 p2 <- ggplot(df3, aes(x=Year, y=value, group = variable)) +
   geom_line(linetype='solid', color = 'black', alpha = 0.8)+
   geom_point(size = 0.7) +
   labs(x = '', y = 'Number of sociology doctorates') +
   facet_grid(as.factor(clust)~. ) +
-  theme_bw() +
+  theme_bw() + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1),
-        legend.title=element_blank(), 
-        legend.position="bottom") +
+        legend.title=element_blank(), legend.position="bottom",
+        panel.background = element_blank()) +
   scale_x_continuous(limits=c(1965, max(df$Year)), breaks=seq(1965, 2015, 5)) # use 5-year ticks
+
 
 multiplot(p2, p1, cols = 1)
