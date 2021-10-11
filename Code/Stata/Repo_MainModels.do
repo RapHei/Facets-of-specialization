@@ -172,26 +172,24 @@ rename _at5 log_Pub_Total
 rename _at8 Z_Identity	
 
 * just to smooth figure for extreme value of consistency = 1.5:
-drop margin_scale
 gen margin_scale = _margin
-replace margin_scale = 8 if margin_scale > 8
+replace margin_scale = 9 if margin_scale > 8
 
 * colors
 twoway (contour margin_scale Z_Identity log_Pub_Total, ///
 	ccuts(0.0(0.5)2 2(1)8) ), ///
 	ytitle("Standardized values of {it:consistency} metric")  ///
 	xtitle("Log({it:Cumulated publications})") ///
-	ztitle("Hazard ratio for {it:first time advisorship}") ///
+	ztitle("Hazard rate for {it:first time advisorship}") ///
 	graphregion(fcolor(white))
 graph export Output/Figures/Fig6_Twoway_Base09_HR.pdf, replace
 
 * black and white
 twoway (contour margin_scale Z_Identity log_Pub_Total, ///
 	ccuts(0.0(0.5)2 2(1)8) ///
-	ccolors(gs1 gs2 gs3 gs4 gs5 gs6 gs7 gs8 gs9 gs10 gs11 gs12) ), ///
+	ccolors(gs1 gs2 gs3 gs4 gs5 gs6 gs7 gs8 gs9 gs10 gs11 gs12 gs13) ), ///
 	ytitle("Standardized values of {it:consistency} metric")  ///
 	xtitle("Log({it:Cumulated publications})") ///
-	ztitle("Hazard ratio for {it:first time advisorship}") ///
+	ztitle("Hazard rate for {it:first time advisorship}") ///
 	graphregion(fcolor(white)) 
 graph export Output/Figures/Fig6_Twoway_Base09_HR_BW.pdf, replace
-
