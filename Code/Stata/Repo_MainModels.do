@@ -180,7 +180,7 @@ twoway (contour margin_scale Z_Identity log_Pub_Total, ///
 	ccuts(0.0(0.5)2 2(1)8) ), ///
 	ytitle("Standardized values of {it:consistency} metric")  ///
 	xtitle("Log({it:Cumulated publications})") ///
-	ztitle("Hazard rate for {it:first time advisorship}") ///
+	ztitle("Hazard ratio for {it:first time advisorship}") ///
 	graphregion(fcolor(white))
 graph export Output/Figures/Fig6_Twoway_Base09_HR.pdf, replace
 
@@ -190,6 +190,6 @@ twoway (contour margin_scale Z_Identity log_Pub_Total, ///
 	ccolors(gs1 gs2 gs3 gs4 gs5 gs6 gs7 gs8 gs9 gs10 gs11 gs12 gs13) ), ///
 	ytitle("Standardized values of {it:consistency} metric")  ///
 	xtitle("Log({it:Cumulated publications})") ///
-	ztitle("Hazard rate for {it:first time advisorship}") ///
+	ztitle("Hazard ratio for {it:first time advisorship}") ///
 	graphregion(fcolor(white)) 
 graph export Output/Figures/Fig6_Twoway_Base09_HR_BW.pdf, replace

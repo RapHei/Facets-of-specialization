@@ -100,7 +100,7 @@ df.plot <- df[df$term %in% (Reduce(intersect, list(A, B, C, D))),]
 px <- dwplot(df.plot,
              conf.level = .83) +
   geom_vline(xintercept = 1, colour = "grey60", linetype = 2) +
-  labs(x = 'Hazard Rate') +
+  labs(x = 'Hazard Ratio') +
   theme_minimal() +
   theme(legend.title=element_blank()) +
   scale_colour_manual(values=c("cyan","deepskyblue","blue","darkblue"), guide = guide_legend(reverse = TRUE))
@@ -114,7 +114,7 @@ dev.off()
 px.bw <- dwplot(df.plot,
              conf.level = .83) +
   geom_vline(xintercept = 1, colour = "grey60", linetype = 2) +
-  labs(x = 'Hazard Rate') +
+  labs(x = 'Hazard Ratio') +
   theme_minimal() +
   theme(legend.title=element_blank()) +
   scale_colour_grey(start = 0.7,
