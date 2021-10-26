@@ -68,22 +68,3 @@ for(year in years){
 }
 
 save(novelty, file = paste('Data/Repo_Novelty_', w,'.RData', sep = '')) 
-
-
-
-## For robustness tests
-windows <- c(2,4)
-
-for(w in windows){
-  years <- (1980 + w):2015
-  for(year in years){
-    thesis.t <- novelty.score(theta, year, w)
-    if(year == min(years)){
-      novelty <- thesis.t
-    }
-    else{
-      novelty <- rbind(novelty, thesis.t)
-    }
-  }
-  save(novelty, file = paste('Data/Repo_Novelty_', w,'.RData', sep = '')) 
-}

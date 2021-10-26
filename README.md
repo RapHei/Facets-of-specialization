@@ -21,7 +21,15 @@ For that purpose, we provide:
 * Topic trends as estimated by `estimate.effects` from `stm`-package. Due to the file's size, please download it here: [Repo_stm.effect](https://bwsyncandshare.kit.edu/s/a3w7tznXLiAKZAB)
 
 All those files rest on the main stm estimated with 60 topics:
-``
+`model <- stm(documents = out$documents, 
+               vocab = out$vocab, 
+               K = 60, 
+               prevalence =~ s(Year),
+               max.em.its = 75, 
+               emtol = .000015 , 
+               verbose = F, 
+               data = out$meta,
+               init.type = "Spectral")`
 
 The raw text data can be found here:
 
@@ -44,7 +52,7 @@ Once all metrics are ready, we can merge them using `Repo_CreateMainDF.R` to der
  
 The main results of the paper (Table 3) and Figures 5 and 6 are then calculated with `Stata`. The necessary code is included in this repo under "Code/Stata". Figure 4 uses output from `Stata` (coefficients, SE, pvalues), but is produced by `ggplot`.
 
-Furthermore, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends.R`, respectively, to reconstruct Figures 2 and 3. For the latter, you need `Repo_stm.effect` as input.
+Furthermore, please refer to `Repo_Fig2_Networks.R` and `Repo_Fig3_Trends.R`, respectively, to reconstruct Figures 2 and 3. For the latter, you need `Repo_stm.effect` as input (please see link above to retrieve data).
 
 Finally, Figure 1 presents insights on the number of sociology students and their demographics. The data mirrors the figures of the ASA on [ethnicity](https://www.asanet.org/academic-professional-resources/data-about-disipline/data-dashboard/degrees-awarded/doctorates-awarded-sociology-race-or-ethnicity) and [gender](https://www.asanet.org/academic-professional-resources/data-about-disipline/data-dashboard/degrees-awarded/doctorates-awarded-sociology-gender), and [NSF Survey of Earned Doctorates](https://ncsesdata.nsf.gov/home/). Figure 1 was made using `Repo_Fig1_FieldStats.R`.
 

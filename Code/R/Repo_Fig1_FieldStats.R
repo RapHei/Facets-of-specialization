@@ -10,7 +10,7 @@ setwd('C:/Users/ac135138/Documents/GitHub/Facets-of-specialization/Data/Figure 1
 require(ggplot2)
 require(reshape2)
 
-# function
+# Function
 multiplot <- function(..., plotlist=NULL, cols) {
   require(grid)
   
@@ -68,7 +68,7 @@ p1 <- ggplot(df, aes(x=Year, y=value, group = variable)) +
   scale_x_continuous(limits=c(1965, max(df$Year)), breaks=seq(1965, 2015, 5)) # use 5-year ticks
 
 
-## Number of students
+## Part 2: Number of students
 df.recip <- read.csv('SED_Sociology_1966-2018.csv', sep = ',', header = T)
 df.recip$X <- NULL
 df3 <- melt(df.recip, id = 'Year')

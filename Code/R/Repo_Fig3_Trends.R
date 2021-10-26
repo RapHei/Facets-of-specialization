@@ -82,8 +82,6 @@ multiplot <- function(..., plotlist=NULL, cols) {
 
 
 ## Estimate topic trends
-# load(file = paste("Data/PRO_model_60_superset_onlyYR.RData", sep = ""))
-# meta <- data.frame(Year = out$meta$Year)
 # stm.effect <- stm::estimateEffect(formula= 1:60 ~ s(Year), stmobj=model, metadata=meta) 
 # save(stm.effect, file="Data/Repo_stm.effect.RData")
 load("Data/Repo_stm.effect.RData") # stm.effect

@@ -1,4 +1,3 @@
-
 *** Define models
 global UV_1 Elite Female White Insider log_Pub_Cum
 
@@ -66,7 +65,7 @@ quiet streg $UV_5, dist(weib) vce(robust)
 estimates store m5
 
 
-esttab m1 m2 m3 m4 m5 using "Output/Stata/Tab3_MainResults.html", ///
+esttab m1 m2 m3 m4 m5 using "Output/Stata/Tab3_MainResults_Test.html", ///
  b(%9.0g ) eform not se star varwidth(25) aic replace
 
  
@@ -76,7 +75,7 @@ esttab m1 m2 m3 m4 m5 using "Output/Stata/Tab3_MainResults.html", ///
  
 * Fig4
 
-** export to R (cf. Repo_Fig4_TargetSpec.R; might use alternative baselines, cf. Repo_TargetSpec.R)
+** export to R (cf. Repo_Fig4_TargetSpec.R)
 *** SE
 esttab m5 using "Output/Stata/SE_Single_Base09.csv", ///
   eform not se replace wide plain

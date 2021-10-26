@@ -30,15 +30,14 @@ topic.contri.thres <- function(theta, year, baseline){
 }
 
 
-# Construct "targeted specialization" w/ different baselines
-
+# Construct "targeted specialization"
 ## Load theta
 load('Data/Theta_Repo.RData') # theta
 topics <- paste('X', 1:60, sep = '')[-47] # exclude noise topic T47 (included in online supplemental)
 
 ## iterate over years
 years <- c(1981:2015)
-base <- 0.9 # alternative baselines (cf. below & online supplemental)
+base <- 0.9
 
 for(year in years){
   temp <- topic.contri.thres(theta, 
@@ -53,21 +52,3 @@ for(year in years){
 }
 
 save(df, file = paste('Data/Repo_TargetSpec_', base, '.RData', sep = ''))
-
-
-## For robustness checks
-for(base in c(0.75, 0.8, 0.85)){
-  for(year in years){
-    temp <- topic.contri.thres(theta, 
-                               year = year,
-                               baseline = base)
-    if(year == min(years)){
-      df <- temp
-    }
-    else{
-      df <- rbind(df, temp)
-    }
-  }
-  
-  save(df, file = paste('Data/Repo_TargetSpec_', base, '.RData', sep = ''))
-}
