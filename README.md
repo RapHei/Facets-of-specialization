@@ -36,6 +36,7 @@ The raw text data can be found here:
 * [ProQuest](https://www.proquest.com/)
 * [Web of Science](https://www.proquest.com/)
 
+Due to legal issues, we cannot provide the raw data with dissertation abstracts, advisees and advisor names, or departments in this repository. We kindly kind interested readers to the links above. However, the repository contains all data necessary to reproduce all results and shows how we construct our 4 key metrics. 
 
 ## Code
 The repository hosts the R-code to construct each *facet of specialization* as discussed in the paper: 
