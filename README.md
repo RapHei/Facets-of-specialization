@@ -5,7 +5,7 @@ The paper can be found [here](https://journals.sagepub.com/doi/10.1177/000312242
 
 If you use any of the code or ideas presented here, please cite our paper:
 
-Heiberger, Raphael H., Munoz-Najar Galvez, Sebastian, and McFarland, Dan A. (2021). Facets of Specialization and Its Relation to Career Success: An Analysis of U.S. Sociology, 1980 to 2015. *American Sociological Review*, 86(5).
+* Heiberger, Raphael H., Munoz-Najar Galvez, Sebastian, and McFarland, Dan A. (2021). Facets of Specialization and Its Relation to Career Success: An Analysis of U.S. Sociology, 1980 to 2015. *American Sociological Review*, 86(5).
 
 
 ## Summary
